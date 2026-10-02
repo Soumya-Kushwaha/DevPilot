@@ -68,7 +68,7 @@ public class RepoService {
 
     @Transactional(readOnly = true)
     public List<RepositoryResponse> listStored(UUID userId){
-        return repositoryRepository.findUserIdOrderByFullNameAsc(userId).stream()
+        return repositoryRepository.findByUserIdOrderByFullNameAsc(userId).stream()
                 .map(this::toResponse)
                 .toList();
     }

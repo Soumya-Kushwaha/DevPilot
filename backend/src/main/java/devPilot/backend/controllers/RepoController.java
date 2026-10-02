@@ -2,12 +2,9 @@ package devPilot.backend.controllers;
 
 import devPilot.backend.dto.IndexStatusResponse;
 import devPilot.backend.dto.RepositoryResponse;
-import devPilot.backend.entity.Repository;
 import devPilot.backend.security.CurrentUser;
 import devPilot.backend.services.RepoService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -31,7 +28,7 @@ public class RepoController {
         return repoService.listStored(userId);
     }
 
-    @GetMapping("/{id")
+    @GetMapping("/{id}")
     public RepositoryResponse get(@PathVariable UUID id){
         UUID userId = currentUser.require().getId();
         return repoService.toResponse(repoService.requireOwned(id, userId));
