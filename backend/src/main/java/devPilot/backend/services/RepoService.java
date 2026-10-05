@@ -86,7 +86,7 @@ public class RepoService {
                 repo.getId(),
                 repo.getIndexStatus(),
                 repo.getTotalFiles(),
-                repo.getFilesProcessed(),
+                repo.getProcessedFiles(),
                 repo.getChunkCount(),
                 repo.getIndexedAt(),
                 repo.getErrorMessage());
@@ -124,7 +124,7 @@ public class RepoService {
                 repo.getIndexedAt(),
                 repo.getChunkCount(),
                 repo.getTotalFiles(),
-                repo.getFilesProcessed(),
+                repo.getProcessedFiles(),
                 repo.getErrorMessage()
         );
     }

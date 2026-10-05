@@ -69,7 +69,7 @@ public class Repository {
 
     @Column(name = "files_processed", nullable = false)
     @Builder.Default
-    private int filesProcessed = 0;
+    private int processedFiles = 0;
 
     @Column(name = "error_message", columnDefinition = "TEXT")
     private String errorMessage;
