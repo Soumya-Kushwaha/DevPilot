@@ -21,6 +21,6 @@ public record RepositoryResponse (
     Instant indexedAt,
     int chunkCount,
     int totalFiles,
-    int filesProcessed,
+    int processedFiles,
     String errorMessage){
 }

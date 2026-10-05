@@ -8,8 +8,8 @@ import java.util.UUID;
 public record IndexStatusResponse(
         UUID repositoryId,
         IndexStatus indexStatus,
-        int filesTotal,
-        int filesProcessed,
+        int totalFiles,
+        int processedFiles,
         int chunkCount,
         Instant indexedAt,
         String errorMessage) {
